@@ -1,0 +1,20 @@
+<div class="row">
+
+    <div class="col-md-12">
+        <div class="content centered animated fadeIn">
+            <h1 class="animated fadeInUp">Producers</h1>
+            <div class="producers" ng-controller="ProducersPage">
+                <li ng-repeat="producer in producers | orderBy:'lname'">
+
+                    <div class="producer-detail">
+                        <img src="{{producer.img}}" />
+                        <p class="producer-name">{{producer.fname}} {{producer.lname}}</p>
+                        <p class="producer-bio" ng-bind-html="producer.bio | unsafe "></p>
+                        <div style="clear:both"></div>
+                    </div>
+                </li>
+            </div>
+        </div>
+    </div>
+
+</div>

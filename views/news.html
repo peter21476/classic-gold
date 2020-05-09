@@ -1,0 +1,16 @@
+<div class="row">
+    
+    <div class="col-md-12" ng-controller="NewsAPI">
+        <div class="content centered animated fadeIn">
+            <h1 class="animated fadeInUp">Today's News</h1>
+            <div class="content-news">
+                <li ng-repeat="post in news.articles">
+                <a target="_blank" href="{{post.url}}"><h2>{{post.title}}</h1>
+                    <img src="{{post.urlToImage}}"/></a>
+                </li>
+                <div style="clear:both"></div>
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,409 @@
+* {
+  font-family: "Raleway", sans-serif;
+}
+
+body {
+  background: url(../img/HD-Spring-Nature-Backgrounds.jpg) no-repeat center center fixed;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.links a, .menu a, .right-sidebar a, .content-news a,
+.links a:hover,
+.menu a:hover,
+.right-sidebar a:hover,
+.content-news a:hover,
+.links a:visited,
+.menu a:visited,
+.right-sidebar a:visited,
+.content-news a:visited,
+.links a:active,
+.menu a:active,
+.right-sidebar a:active,
+.content-news a:active {
+  color: white;
+  text-decoration: none;
+}
+
+.centered {
+  display: block;
+  margin: 0 auto;
+}
+
+.top-bar {
+  background: rgba(0, 0, 0, 0.1);
+  -webkit-transition: background 1s;
+  transition: background 1s;
+}
+
+.top-bar-effect {
+  background: rgba(0, 0, 0, 0.8);
+  -webkit-transition: background 1s;
+  transition: background 1s;
+}
+
+.content {
+  width: 50%;
+  min-width: 720px;
+  margin-top: 100px;
+}
+
+.content p {
+  color: black;
+}
+
+.content h1 {
+  background-color: cornflowerblue;
+  padding: 10px;
+  margin: 0;
+  color: white;
+}
+
+.content-text {
+  background-color: rgba(192, 192, 192, 0.8);
+  padding: 30px;
+}
+
+.content-text img {
+  width: 40%;
+  float: left;
+  margin: 10px;
+}
+
+.menu {
+  margin-top: 100px;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  position: fixed;
+}
+
+.menu ul {
+  margin: 0px -15px;
+  display: inline-block;
+  text-align: center;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 15px;
+}
+
+.menu li {
+  list-style-type: none;
+  color: white;
+  font-size: 17px;
+  margin-bottom: 15px;
+}
+
+.menu li span {
+  width: 120px;
+  display: none;
+  margin-top: -3px;
+  margin-left: 15px;
+  font-family: "Raleway", sans-serif;
+  padding: 8px;
+  background-color: cornflowerblue;
+  z-index: -1 !important;
+}
+
+.menu .fa {
+  border: 3px solid white;
+  padding: 5px;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+}
+
+.menu-effect {
+  background: black;
+  -webkit-transition: background 0.5s;
+  transition: background 0.5s;
+}
+
+.remove-effect {
+  background: transparent;
+  -webkit-transition: background 0.5s;
+  transition: background 0.5s;
+}
+
+.show-menu-text {
+  display: inline !important;
+  position: absolute;
+}
+
+.right-sidebar {
+  margin-top: 100px;
+}
+
+.right-sidebar ul {
+  margin: 0px -114px;
+  display: inline-block;
+  text-align: center;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 15px;
+  position: fixed;
+}
+
+.right-sidebar li {
+  list-style-type: none;
+  color: white;
+  font-size: 17px;
+  margin-bottom: 20px;
+  background-color: cornflowerblue;
+  padding: 15px;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.right-sidebar button {
+  background: transparent !important;
+  border: 0 !important;
+}
+
+.content-news {
+  background-color: rgba(192, 192, 192, 0.8);
+  padding: 30px;
+  margin-bottom: 70px;
+}
+
+.content-news li {
+  width: 45%;
+  height: 241px;
+  list-style-type: none;
+  display: inline-block;
+  float: left;
+  margin-right: 5%;
+  margin-bottom: 10px;
+  background-color: #E06C79;
+}
+
+.content-news h2 {
+  font-size: 16px;
+  padding: 5px;
+  color: white;
+}
+
+.content-news img {
+  width: 100%;
+}
+
+.content-songs {
+  background-color: rgba(192, 192, 192, 0.8);
+  padding-top: 20px;
+  padding-left: 31px;
+  margin-bottom: 70px;
+}
+
+.content-songs li {
+  width: 45%;
+  height: 100px;
+  list-style-type: none;
+  display: inline-block;
+  float: left;
+  margin-right: 5%;
+  margin-bottom: 10px;
+  background-color: #E06C79;
+  color: white;
+}
+
+.song-detail {
+  padding: 10px;
+}
+
+.song-detail p {
+  color: white;
+}
+
+.song-time {
+  background-color: cornflowerblue;
+  padding: 5px;
+  display: inline-block;
+  font-weight: bold;
+}
+
+#spinner {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#spinner .fa {
+  color: white;
+  font-size: 60px;
+  text-shadow: 1px 1px 8px black;
+}
+
+.footer {
+  text-align: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 14px;
+}
+
+.top-bar ul {
+  display: none;
+}
+
+.weather {
+  width: 50%;
+  height: 165px;
+  padding: 5px;
+  text-align: center;
+  background-color: #E06C79;
+  float: left;
+}
+
+.weather p {
+  color: white;
+  font-size: 16px;
+  text-transform: capitalize;
+}
+
+.weather h2 {
+  color: white;
+  font-size: 21px;
+}
+
+.playing-now {
+  width: 50%;
+  height: 165px;
+  padding: 5px;
+  text-align: center;
+  background-color: cornflowerblue;
+  float: left;
+}
+
+.playing-now p {
+  color: white;
+  font-size: 16px;
+  text-transform: capitalize;
+}
+
+.playing-now h2 {
+  color: white;
+  font-size: 21px;
+}
+
+.directories ul {
+  margin: 0;
+  padding: 0;
+}
+
+.directories li {
+  width: 50%;
+  list-style-type: none;
+  float: left;
+}
+
+.directories img {
+  width: 100%;
+}
+
+.producers {
+  background: rgba(192, 192, 192, 0.8);
+}
+
+.producers li {
+  list-style-type: none;
+  border-bottom: 2px solid lightgray;
+  padding-top: 17px;
+}
+
+.producer-detail {
+  padding: 10px;
+}
+
+.producer-detail img {
+  float: left;
+  margin-right: 10px;
+}
+
+.producer-name {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+@media (max-width: 1024px) {
+  body {
+    background: #f5f5f5;
+  }
+  .menu {
+    display: none;
+  }
+  .right-sidebar {
+    display: none;
+  }
+  .top-bar {
+    background: rgba(0, 0, 0, 0.5);
+  }
+  .top-bar img {
+    width: 80px;
+    display: inline;
+  }
+  .top-bar ul {
+    display: inline;
+    text-align: center;
+  }
+  .top-bar li {
+    list-style-type: none;
+    display: inline-block;
+    margin-right: 10px;
+  }
+  .top-bar .fa {
+    border: 3px solid white;
+    padding: 5px;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    font-size: 17px;
+    text-align: center;
+  }
+  .top-bar a,
+  .top-bar a:hover,
+  .top-bar a:visited,
+  .top-bar a:active {
+    color: white;
+  }
+  .content {
+    margin-top: 0px;
+    min-width: 99%;
+    margin-bottom: 110px;
+  }
+  .content-news li {
+    width: 90%;
+    margin-bottom: 100px;
+    margin-left: 5%;
+    height: auto;
+  }
+}
+
+@media (max-width: 700px) {
+  .content-songs li {
+    width: 93%;
+  }
+  .weather {
+    width: 100%;
+    float: none;
+  }
+  .playing-now {
+    width: 100%;
+    float: none;
+  }
+  .playing-widget img {
+    width: 20% !important;
+  }
+  .directories {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .content-news li {
+    margin-bottom: 70px;
+    height: auto;
+  }
+  .top-bar ul {
+    margin-left: -20px;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

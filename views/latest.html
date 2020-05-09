@@ -1,0 +1,21 @@
+<div class="row">
+    
+    <div class="col-md-12" ng-controller="SongsAPI">
+        <div class="content centered animated fadeIn">
+            <h1 class="animated fadeInUp">Latest Songs Played</h1>
+            <div class="content-songs">
+                <div id="spinner"><i class="fa fa-spinner fa-spin" aria-hidden="true"></i></div>
+                <li ng-repeat="song in songs.items">
+
+                    <div class="song-detail">
+                        
+                        <p class="song-time">{{song.date * 1000 | date:'medium'}}</p>
+                        <p>{{song.title}}</p></div>
+                
+                </li>
+                <div style="clear:both"></div>
+            </div>
+        </div>
+    </div>
+
+</div>

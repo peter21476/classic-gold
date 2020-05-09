@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://hazel.torontocast.com:3110/media/static/css/player/base.css" rel="stylesheet" type="text/css" />
+    <link href="https://hazel.torontocast.com:3110/media/static/css/player/style-12.css" rel="stylesheet" type="text/css" />
+    <link href="https://hazel.torontocast.com:3110/media/static/css/ui/jquery.ui.slider.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="https://hazel.torontocast.com:3110/media/static/css/current_track_widget/status_widget.css" />
+    <script>
+        if (typeof jQuery == 'undefined') { 
+          var i = "i";
+          document.write('<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></scr' + i + 'pt>');
+        }
+    </script>
+    <script type="text/javascript" src="https://hazel.torontocast.com:3110/media/static/js/jplayer/jquery.jplayer.min.js"></script>
+    <script type="text/javascript" src="https://hazel.torontocast.com:3110/media/static/js/jplayer/jquery-ui-1.10.2.custom.min.js"></script>
+    <script type="text/javascript" src="https://hazel.torontocast.com:3110/media/static/js/jplayer/modernizr.js"></script>
+    <script type="text/javascript" src="https://hazel.torontocast.com:3110/media/static/js/jplayer/rt_pl.js"></script>
+    <title>Classic Gold HD Player</title>
+    <style>
+        body {
+            overflow: hidden;
+        }
+
+        #wrapper {
+            width: 580px;
+            height: 600px;
+            background-color: black;
+            padding: 20px;
+
+        }
+
+        #left {
+            width: 250px;
+            float: left;
+            border-right: solid #ffffff 1px;
+        }
+
+        #right {
+            width: 320px;
+            float: right;
+
+        }
+
+        .player {
+            width: 300px;
+            text-align: center;
+            padding-top: 2px;
+            margin: 0 auto;
+
+        }
+
+        #clockbox {
+            text-align: center;
+            color: white;
+            font: 14px Arial, sans-serif;
+        }
+
+        p {
+            font: 14px Arial, sans-serif;
+            color: #ffffff;
+        }
+
+        #songinfo {
+            width: 90%;
+            height: 100%;
+            background-color: #BB9E00;
+            border-radius: 10px;
+            color: white;
+            padding: 10px;
+            text-shadow: 1px 2px #000000;
+        }
+
+        #songinfo a:link,
+        #songinfo a:visited,
+        #songinfo a:hover {
+            color: white;
+            text-decoration: none;
+        }
+
+        #cc_strinfo_song_classicgoldhd p {
+            color: white;
+        }
+
+
+        }
+
+        #clear {
+            clear: both;
+        }
+
+        #footer {
+            margin-left: auto;
+            margin-right: auto;
+            width: 70%;
+        }
+
+        #top {
+            margin-left: auto;
+            margin-right: auto;
+            width: 70%;
+        }
+
+        #left img {
+            display: block;
+            margin: 0 auto;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+        <div id="top"></div>
+
+        <div id="left">
+            <img src="http://classicgold.ca/img/logo.png">
+
+        </div>
+
+        <div id="right">
+            <script type="text/javascript">
+                tday = new Array("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday");
+                tmonth = new Array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
+
+                function GetClock() {
+                    d = new Date();
+                    nday = d.getDay();
+                    nmonth = d.getMonth();
+                    ndate = d.getDate();
+                    nyear = d.getYear();
+                    if (nyear < 1000) nyear = nyear + 1900;
+
+
+                    document.getElementById('clockbox').innerHTML = "" + tday[nday] + ", " + tmonth[nmonth] + " " + ndate + ", " + nyear + "";
+                    setTimeout("GetClock()", 1000);
+                }
+                window.onload = GetClock;
+
+            </script>
+            <div id="clockbox"></div>
+            <p style="text-align:center;">Broadcasting Live from Classic-Gold's Headquarters in Toronto, Canada</p>
+
+            <div id="rtJpID-1"></div>
+            <div class="rtplwrapperForIe">
+            <div id="rtplayer-1" class="rtplmain_window gradient_style-12">
+            <a id="button_play_stop-1" class="rtplbutton_play_stop button_play_stop_style-12" href="#"></a>
+            <div id="current_time-1" class="rtplcurrent_time">00:00:00</div>
+            <a id="rtplmute-1" class="rtplmute button_mute_style-12" href="#"></a>
+            <div id="rtplvolume-1" class="rtplvolume"></div>
+            <a id="rtplmaxvol-1" class="rtplmaxvol button_max_vol_style-12" href="#"></a>
+            </div>
+            </div>
+
+            <div style="width: 300px;">
+                <div class="sc-status-widget">
+                <div is="stream-status-widget" 
+                lang="en" 
+                api-base="https://hazel.torontocast.com:3110/api/v2" 
+                server-id="1" 
+                bgcolor="#000000"
+                bgopacity="1"
+                bgimage=""
+                meta_font_size="14"
+                meta_font_style="normal"
+                meta_font_color="#ffffff"
+                meta_opacity="1"
+                progress_bar_color="#cec506"
+                progress_bar_bg_color="#e1e1e1"
+                progress_bar_height="25"
+                progress_opacity="1"
+                progress_font_color="#000000"
+                progress_font_opacity="1"
+                track_image_default="https://hazel.torontocast.com:3110/media/tracks/default_track_img.png"
+                track_image_size="80"
+                vote_show="true"
+                vote_buttons_color="#cec506"
+                vote_results_font_color_neg="#ff0000"
+                vote_results_font_color_pos="#00ff00"
+                vote_results_font_size="14"
+                >
+                </div>
+                </div>
+                </div>
+            <!--SongInfo-->
+            <p style="text-align:center;">Streaming by TorontoCast<br /> Licensed by SOCAN
+            </p>
+        </div>
+        <div id="clear"></div>
+        <div id="footer">
+
+
+
+
+
+            <div>
+                <!--footer-->
+            </div>
+            <!--Wrapper-->
+            <script>$(document).ready( function(){ new RTPlayer( 1, 50, true, "https://hazel.torontocast.com:3110",  "mp3", {"mp3": "https://hazel.torontocast.com:3125/stream"}, "en")  });</script>
+            <script type="text/javascript" src="https://hazel.torontocast.com:3110/media/static/js/current_track_widget/status_widget.js"></script>
+</body>
+
+</html>

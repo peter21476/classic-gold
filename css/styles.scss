@@ -1,0 +1,429 @@
+$mainFont: 'Raleway',
+sans-serif;
+
+* {
+    font-family: $mainFont;
+}
+
+body {
+    background: url(../img/HD-Spring-Nature-Backgrounds.jpg) no-repeat center center fixed;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.links {
+    a,
+    a:hover,
+    a:visited,
+    a:active {
+        color: white;
+        text-decoration: none;
+    }
+}
+
+.centered {
+    display: block;
+    margin: 0 auto;
+}
+
+.top-bar {
+    background: rgba(0, 0, 0, 0.1);
+    transition: background 1s;
+
+}
+
+.top-bar-effect {
+    background: rgba(0, 0, 0, 0.8);
+    transition: background 1s;
+}
+
+
+.content {
+    width: 50%;
+    min-width: 720px;
+    margin-top: 100px;
+
+    p {
+        color: black;
+    }
+
+    h1 {
+        background-color: cornflowerblue;
+        padding: 10px;
+        margin: 0;
+        color: white;
+    }
+}
+
+.content-text {
+    background-color: rgba(192, 192, 192, 0.8);
+    padding: 30px;
+
+    img {
+        width: 40%;
+        float: left;
+        margin: 10px;
+    }
+}
+
+.menu {
+
+    margin-top: 100px;
+    animation-duration: 3s;
+    animation-delay: 1s;
+    position: fixed;
+
+    ul {
+        margin: 0px -15px;
+        display: inline-block;
+        text-align: center;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 15px;
+
+    }
+
+    li {
+        list-style-type: none;
+        color: white;
+        font-size: 17px;
+        margin-bottom: 15px;
+
+        span {
+            width: 120px;
+            display: none;
+            margin-top: -3px;
+            margin-left: 15px;
+            font-family: $mainFont;
+            padding: 8px;
+            background-color: cornflowerblue;
+            z-index: -1 !important;
+        }
+
+    }
+    .fa {
+        border: 3px solid white;
+        padding: 5px;
+        border-radius: 50%;
+        width: 32px;
+        height: 32px;
+    }
+
+    @extend .links;
+}
+
+.menu-effect {
+    background: black;
+    transition: background 0.5s;
+}
+
+.remove-effect {
+    background: transparent;
+    transition: background 0.5s;
+}
+
+.show-menu-text {
+    display: inline !important;
+    position: absolute;
+}
+
+.right-sidebar {
+
+    margin-top: 100px;
+
+    @extend .links;
+
+    ul {
+        margin: 0px -114px;
+        display: inline-block;
+        text-align: center;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 15px;
+        position: fixed;
+    }
+
+    li {
+        list-style-type: none;
+        color: white;
+        font-size: 17px;
+        margin-bottom: 20px;
+        background-color: cornflowerblue;
+        padding: 15px;
+        animation-delay: 2s;
+    }
+
+    button {
+        background: transparent !important;
+        border: 0 !important;
+    }
+
+}
+
+.content-news {
+    background-color: rgba(192, 192, 192, 0.8);
+    padding: 30px;
+    margin-bottom: 70px;
+    li {
+        width: 45%;
+        height: 241px;
+        list-style-type: none;
+        display: inline-block;
+        float: left;
+        margin-right: 5%;
+        margin-bottom: 10px;
+        background-color: #E06C79
+    }
+    h2 {
+        font-size: 16px;
+        padding: 5px;
+        color: white;
+    }
+    img {
+        width: 100%;
+    }
+    @extend .links;
+}
+
+.content-songs {
+    background-color: rgba(192, 192, 192, 0.8);
+    padding-top: 20px;
+    padding-left: 31px;
+    margin-bottom: 70px;
+    li {
+        width: 45%;
+        height: 100px;
+        list-style-type: none;
+        display: inline-block;
+        float: left;
+        margin-right: 5%;
+        margin-bottom: 10px;
+        background-color: #E06C79;
+        color: white;
+    }
+}
+
+.song-detail {
+    padding: 10px;
+    p {
+        color: white;
+    }
+}
+
+.song-time {
+    background-color: cornflowerblue;
+    padding: 5px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+#spinner {
+    text-align: center;
+    margin-bottom: 10px;
+    .fa {
+        color: white;
+        font-size: 60px;
+        text-shadow: 1px 1px 8px black;
+    }
+}
+
+.footer {
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 14px;
+}
+
+.top-bar {
+    ul {
+        display: none;
+    }
+}
+
+.weather {
+    width: 50%;
+    height: 165px;
+    padding: 5px;
+    text-align: center;
+    background-color: #E06C79;
+    float: left;
+    p {
+        color: white;
+        font-size: 16px;
+        text-transform: capitalize;
+
+    }
+    h2 {
+        color: white;
+        font-size: 21px;
+    }
+}
+
+.playing-now {
+    width: 50%;
+    height: 165px;
+    padding: 5px;
+    text-align: center;
+    background-color: cornflowerblue;
+    float: left;
+    p {
+        color: white;
+        font-size: 16px;
+        text-transform: capitalize;
+
+    }
+    h2 {
+        color: white;
+        font-size: 21px;
+    }
+
+}
+
+
+.directories {
+
+    ul {
+
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        width: 50%;
+        list-style-type: none;
+        float: left;
+    }
+
+    img {
+        width: 100%;
+
+    }
+
+}
+
+.producers {
+    background: rgba(192, 192, 192, 0.8);
+
+    li {
+        list-style-type: none;
+        border-bottom: 2px solid lightgray;
+        padding-top: 17px;
+
+
+    }
+}
+
+.producer-detail {
+    padding: 10px;
+
+    img {
+
+        float: left;
+        margin-right: 10px;
+    }
+}
+
+.producer-name {
+    font-weight: bold;
+    font-size: 18px;
+
+}
+
+@media (max-width:1024px) {
+
+    body {
+        background: #f5f5f5;
+    }
+
+    .menu {
+        display: none;
+    }
+    .right-sidebar {
+        display: none;
+    }
+    .top-bar {
+        background: rgba(0, 0, 0, 0.5);
+
+        img {
+            width: 80px;
+            display: inline;
+        }
+
+        ul {
+            display: inline;
+            text-align: center;
+        }
+        li {
+            list-style-type: none;
+            display: inline-block;
+            margin-right: 10px;
+        }
+        .fa {
+            border: 3px solid white;
+            padding: 5px;
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+            font-size: 17px;
+            text-align: center;
+        }
+        a,
+        a:hover,
+        a:visited,
+        a:active {
+            color: white;
+        }
+    }
+
+    .content {
+        margin-top: 0px;
+        min-width: 99%;
+        margin-bottom: 110px;
+    }
+    .content-news li {
+        width: 90%;
+        margin-bottom: 100px;
+        margin-left: 5%;
+        height: auto;
+
+    }
+}
+
+@media (max-width:700px) {
+    .content-songs li {
+        width: 93%;
+    }
+    .weather {
+        width: 100%;
+        float: none;
+    }
+    .playing-now {
+        width: 100%;
+        float: none;
+    }
+
+    .playing-widget {
+
+        img {
+            width: 20% !important;
+        }
+
+    }
+
+    .directories {
+        width: 100%;
+
+    }
+}
+
+@media (max-width:600px) {
+    .content-news li {
+        margin-bottom: 70px;
+        height: auto;
+    }
+
+    .top-bar ul {
+        margin-left: -20px;
+    }
+
+}
